@@ -1,43 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Pet Shop</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ADLaM Display -->
     <link
       href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Google Sora Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Sora -->
     <link
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- DaisyUI CDN -->
+    <!-- DaisyUI -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Fontawesome -->
-
-    <!-- Font Awesome Free CSS CDN via jsDelivr -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"
     />
 
-    <!-- Font Style added -->
+    <!-- Font Style -->
     <style>
       .sora-font {
         font-family: "Sora", sans-serif;
@@ -45,6 +46,7 @@
         font-weight: 400;
         font-style: normal;
       }
+
       .adlam-font {
         font-family: "ADLaM Display", system-ui;
         font-weight: 400;
@@ -52,18 +54,83 @@
       }
     </style>
   </head>
-  <body class="w-full  mx-auto  ">
+
+  <body class="w-full sora-font">
+
+    <!-- ================= HEADER ================= -->
     <header>
-      <section>
-        <div class="sora-font">
-          <div class="navbar bg-orange-100 shadow-sm mx-auto">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+
+      <!-- Full Width Background -->
+      <section class="w-full bg-[#FFF9F4] border-b border-gray-200">
+
+        <!-- Responsive Container -->
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <!-- ================= NAVBAR ================= -->
+          <div class="navbar min-h-20 px-0 flex justify-between items-center">
+
+            <!-- ================= LEFT SIDE (LOGO) ================= -->
+            <div class="navbar-start w-auto">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./Assignment_03_Category_0001/c1-assets/logo-header.png"
+                  alt="Browse4Pets Logo"
+                  class="w-9 sm:w-10"
+                />
+                <a
+                  class="hidden sm:inline-block text-lg sm:text-xl lg:text-2xl font-normal whitespace-nowrap"
+                >
+                  Browse<span class="text-yellow-400">4</span>Pets
+                </a>
+              </div>
+            </div>
+
+            <!-- ================= CENTER MENU (DESKTOP) ================= -->
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Find Pet</a></li>
+                <li><a>Breeds</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
+            </div>
+
+            <!-- ================= RIGHT SIDE ================= -->
+            <div class="navbar-end w-auto">
+
+              <!-- Desktop Buttons/Icons -->
+              <div class="hidden lg:flex items-center">
+                <!-- Search -->
+                <a class="cursor-pointer px-4">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <!-- Notification -->
+                <a class="cursor-pointer px-4">
+                  <i class="fa-regular fa-bell"></i>
+                </a>
+
+                <!-- Login -->
+                <a class="btn btn-outline btn-warning mx-2 text-black">
+                  Login
+                </a>
+
+                <!-- Register -->
+                <a class="btn btn-warning text-black">
+                  Register
+                </a>
+              </div>
+
+              <!-- Mobile/Tablet Dropdown Button (Right Side) -->
+              <div class="dropdown dropdown-end lg:hidden">
+                <div
+                  tabindex="0"
+                  role="button"
+                  class="btn btn-ghost btn-circle"
+                >
                   <svg
                     aria-label="Menu"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
+                    class="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -72,47 +139,33 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
+                      d="M4 6h16M4 12h16M4 18h16"
                     />
                   </svg>
                 </div>
+
+                <!-- Mobile Dropdown Menu Content -->
                 <ul
                   tabindex="-1"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
                 >
                   <li><a>Find Pet</a></li>
-                  <li>
-                    <a>Breeds</a>
-                  </li>
+                  <li><a>Breeds</a></li>
                   <li><a>Contact Us</a></li>
                 </ul>
               </div>
-              <img
-                src="./Assignment_03_Category_0001/c1-assets/logo-header.png"
-                alt=""
-              />
-              <a class="text-xl sm:text-2xl font-normal whitespace-nowrap">
-                Browse<span class="text-yellow-400">4</span>Pets
-              </a>
+
             </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Find Pet</a></li>
-                <li>
-                  <a>Breeds</a>
-                </li>
-                <li><a>Contact Us</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end ">
-              <a><i class="fa-solid fa-magnifying-glass px-5"></i></a>
-              <a><i class="fa-regular fa-bell px-5"></i></a>
-              <a class="btn btn-outline btn-warning mx-2 text-black">Login</a>
-              <a class="btn btn-warning text-black">Register</a>
-            </div>
+
           </div>
+          <!-- ================= END NAVBAR ================= -->
+
         </div>
+
       </section>
+
     </header>
+    <!-- ================= END HEADER ================= -->
+
   </body>
 </html>
