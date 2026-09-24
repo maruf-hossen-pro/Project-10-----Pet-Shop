@@ -152,27 +152,53 @@
         </div>
       </section>
 
-      <!-- Hero Section -->
-      <section>
-        <div>
-          <div class="hero bg-white min-h-screen">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+      <!-- ================= HERO SECTION ================= -->
+      <!--
+        DESIGN NOTE (corrected understanding):
+        The cat image is NOT one half of a two-column layout.
+        It's a single full-width image (the PNG itself has a lot of
+        transparent space on the left, so the cat visually sits on
+        the right side even though the <img> spans the full width).
+
+        The text sits ON TOP of that image as an absolute-positioned
+        overlay, left-aligned, near the top of the section — not
+        beside it in a separate flex column.
+      -->
+      <section class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="relative w-full flex flex-col">
+            <!-- ================= TEXT ================= -->
+            <div
+              class="order-1 w-full text-left py-8 lg:absolute lg:top-16 lg:left-0 lg:max-w-md lg:py-0 lg:z-10"
+            >
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl font-bold adlam-font leading-tight"
+              >
+                Pamper Your Pet, Because They Deserve the Best
+              </h1>
+
+              <p class="py-4 lg:py-6 text-gray-600 text-sm sm:text-base">
+                Discover a world of treats, toys, and essentials handpicked for
+                your furry friends. Shop now and make tails wag with joy!
+              </p>
+
+              <button class="btn btn-warning border-none btn-sm sm:btn-md">
+                Find a pet
+              </button>
+            </div>
+
+            <!-- ================= CAT IMAGE ================= -->
+            <div class="order-2 w-full">
               <img
-                alt="Tailwind CSS hero component"
+                alt="A cat lying down, looking at the camera"
                 src="./Assignment_03_Category_0001/c1-assets/cat-big.png"
-                class="max-w-lg rounded-lg"
+                class="w-full h-auto"
               />
-              <div class="max-w-md">
-                <h1 class="text-5xl font-bold adlam-font">Pamper Your Pet, Because They Deserve the Bes</h1>
-                <p class="py-6  ">
-                  Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!
-                </p>
-                <button class="btn btn-warning border-none">Find a pet</button>
-              </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- ================= END HERO SECTION ================= -->
     </header>
     <!-- ================= END HEADER ================= -->
   </body>
